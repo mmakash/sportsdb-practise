@@ -1,8 +1,9 @@
 import React from 'react';
+import './Nav.css';
 
 const Nav = () => {
     return (
-        <div>
+        <div className='nav'>
             <h1>This is Nav</h1>
         </div>
     );
