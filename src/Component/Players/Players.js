@@ -2,10 +2,19 @@ import React from 'react';
 import SinglePlayer from '../SinglePlayer/SinglePlayer';
 import './Players.css';
 
-const Players = () => {
+const Players = ({players,cart,setCart}) => {
+    // console.log(players);
     return (
         <div>
-            <SinglePlayer></SinglePlayer>
+            <div className="cart-container">
+            {
+                players.map(pd =><SinglePlayer player={pd}
+                    key={pd.idPlayer}
+                    cart={cart}
+                    setCart={setCart}
+                    ></SinglePlayer>)
+            }
+            </div>
         </div>
     );
 };
